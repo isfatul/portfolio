@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+.input1:focus{
+  outline: none;
+}
+
+.sayt {
+  width: 100%;
+  position: relative;
+  /* padding: 10px; */
+  /* border: 1px solid #23538a; */
+  display: inline-block;
+  border-radius: 3px;
+  
+  &__input {
+    background: none;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+  }
+  &__suggestion {
+    color: #7e8690;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 5;
+  }
+  &__input,
+  &__suggestion {
+    font-family: "SF Mono Light", monospace;
+    font-size: 16px;
+  }
+}
