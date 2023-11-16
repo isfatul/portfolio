@@ -17,7 +17,7 @@ function App() {
       // Create a new log entry
       if (inputValue == "") {
         console.log("empty");
-      } else if (enteredValue === "start") {
+      } else if (enteredValue.toLowerCase() === "start") {
         const logEntry = (
           <code key={logs.length}>
             portfolio@chowdhuryisfatulkarim - ~ -{" "}
@@ -30,6 +30,8 @@ function App() {
                   textAlign: "justify",
                   paddingRight: "10px",
                   paddingTop: "10px",
+                  display: "flex",
+                  flexDirection: "column",
                 }}
               >
                 <span style={{ fontWeight: "bold", fontSize: "22px" }}>
@@ -65,15 +67,48 @@ function App() {
                     border: "1px solid green",
                     padding: "10px 20px",
                     margin: "10px",
+                    maxWidth: "700px",
                   }}
+                  
                 >
                   This is an interactive terminal themed portfolio. You can type
-                  commands to navigate and explore.<br/>
+                  commands or click on any section mentioned below to navigate
+                  and explore.
+                  <br />
                   Type "help" to see commands list.
                 </div>
-                
+
+                <div
+                  style={{
+                    flex: "1",
+                    textAlign: "center",
+                    maxWidth: "800px",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "10px",
+                  }}
+                >
+                  <a href="#">Resume</a> / <a href="#">Email</a> /{" "}
+                  <a href="#">Github</a> / <a href="#">LinkedIn</a> /{" "}
+                  <a href="https://www.facebook.com/isfatul.karim/" target="_blank">Facebook</a> / <a href="#">WhatsApp</a> /{" "}
+                  <a href="#">X</a>
+                  <br />
+                  <a href="#">Experience</a> / <a href="#">Education</a> /{" "}
+                  <a href="#">Research</a> / <a href="#">Research Interest</a> /{" "}
+                  <a href="#">Skills</a> <br />
+                  <a href="#">Honors & Awards</a> /{" "}
+                  <a href="#">Academic Projects</a> /{" "}
+                  <a href="#">Co-curricular Activities</a> /{" "}
+                  <a href="#">Miscellaneous</a>
+                </div>
               </div>
-              <div style={{ flex: "1" }}>
+              <div
+                style={{
+                  flex: "1",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <img
                   src={portrait}
                   style={{ height: "400px", borderRadius: "50px" }}
@@ -84,7 +119,7 @@ function App() {
         );
         // Append the log entry to the logs array
         setLogs([...logs, logEntry]);
-      } else if (enteredValue === "help") {
+      } else if (enteredValue.toLowerCase() === "help") {
         const logEntry = (
           <code key={logs.length}>
             portfolio@chowdhuryisfatulkarim - ~ -{" "}
@@ -97,9 +132,9 @@ function App() {
               Usage:
               <br />
               <br />
-              start - introduction <br/>
-              help - see commands list <br/>
-              clear - clear the screen <br/>
+              start - introduction <br />
+              help - see commands list <br />
+              clear - clear the screen <br />
               <br />
               <br />
               All commands:
@@ -145,7 +180,69 @@ function App() {
         );
         // Append the log entry to the logs array
         setLogs([...logs, logEntry]);
-      } else if (enteredValue === "clear") {
+      } else if (enteredValue.toLowerCase() === "experience") {
+        const logEntry = (
+          <code key={logs.length}>
+            portfolio@chowdhuryisfatulkarim - ~ -{" "}
+            <span style={{ color: "green" }}>master</span> ~$ {enteredValue}
+            <br />
+            <span>
+              &lt;command&gt;
+              <br />
+              <br />
+              Usage:
+              <br />
+              <br />
+              start - introduction <br />
+              help - see commands list <br />
+              clear - clear the screen <br />
+              <br />
+              <br />
+              All commands:
+              <br />
+              <br />
+              <span style={{ marginLeft: "20px" }}>
+                access, adduser, audit, bugs, cache, ci, completion,
+                <br />
+                config, dedupe, deprecate, diff, dist-tag, docs, doctor,
+                <br />
+                edit, exec, explain, explore, find-dupes, fund, get, help,
+                <br />
+                help-search, hook, init, install, install-ci-test,
+                <br />
+                install-test, link, ll, login, logout, ls, org, outdated,
+                <br />
+                owner, pack, ping, pkg, prefix, profile, prune, publish,
+                <br />
+                query, rebuild, repo, restart, root, run-script, search,
+                <br />
+                set, shrinkwrap, star, stars, start, stop, team, test,
+                <br />
+                token, uninstall, unpublish, unstar, update, version, view,
+                <br />
+                whoami
+                <br />
+              </span>
+              <br />
+              Specify configs in the ini-formatted file:
+              <br />
+              /Users/chowdhuryisfatulkarim/.npmrc
+              <br />
+              or on the command line via: npm &lt;command&gt; --key=value
+              <br />
+              <br />
+              More configuration info: npm help config
+              <br />
+              Configuration fields: npm help 7 config
+              <br />
+              npm@9.6.7 /usr/local/lib/node_modules/npm
+            </span>
+          </code>
+        );
+        // Append the log entry to the logs array
+        setLogs([...logs, logEntry]);
+      }
+       else if (enteredValue === "clear") {
         setLogs([]);
       } else {
         const logEntry = (

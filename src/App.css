@@ -72,3 +72,17 @@
     font-size: 16px;
   }
 }
+
+a:link{
+  color: #4891ea;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:visited{
+  color: rgb(0, 42, 255);
+  text-decoration: none;
+}
+a:hover{
+  color: white;
+  text-decoration: underline;
+}
