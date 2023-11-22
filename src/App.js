@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CMD from "./cmd";
 import "./App.css";
 import NotFound from "./404";
-import '@mantine/core/styles.css';
+// import '@mantine/core/styles.css';
 
 
 function App() {
