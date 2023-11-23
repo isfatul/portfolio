@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/069854df-753f-4b28-b888-d20956afaa2f/deploy-status)](https://app.netlify.com/sites/isfatul/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/069854df-753f-4b28-b888-d20956afaa2f/deploy-status)](https://app.netlify.com/sites/isfatul/deplo
 
 # Hi 👋, I'm Chowdhury Isfatul Karim
 **`Computer Science and Engineering @ BRAC University | Co-founder @ PixL. | React Developer`**
